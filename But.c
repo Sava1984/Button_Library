@@ -1,13 +1,9 @@
 #include "main.h"
 #include "But.h"
 
-//uint8_t Button_State = 0;
-//uint8_t PressOk=0;
-//uint8_t PressOk_LongPress = 0;
-//uint32_t Button_Timer=0,Deb_Timer = 0;
-//uint32_t Button_Release_Timer;
-//uint32_t Deb_Timer_Reset;
-//uint32_t Button_Double_Press_Timer = 0;
+// Для работы с библиотекой необходимо создать столько структур, сколько кнопок и заполнить их.
+// После чего вызывать функцию But_Poll каждую миллисекунду
+// Когда нужно проверять состояние копки и сбрасывать в BUT_STATE_NOT_PRESSED после обработки состояния
 void Button_Set_State ( BUTTON *But,uint8_t State)
 {
 	But->But_State = State;
